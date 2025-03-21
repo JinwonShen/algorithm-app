@@ -1,0 +1,992 @@
+[
+  {
+    "id": "1",
+    "title": "별 출력",
+    "category": "반복문",
+    "difficulty": "Easy",
+    "description": "입력된 숫자 N에 대해 N줄의 별(*)을 출력하는 프로그램을 작성하시오.",
+    "input": "5",
+    "output": "*\n**\n***\n****\n*****",
+    "examples": [
+      {
+        "input": "3",
+        "output": "*\n**\n***"
+      },
+      {
+        "input": "1",
+        "output": "*"
+      }
+    ],
+    "hints": ["반복문을 활용하여 줄마다 '*'을 출력하면 됩니다."]
+  },
+  {
+    "id": "2",
+    "title": "두 수 사이 숫자",
+    "category": "반복문",
+    "difficulty": "Easy",
+    "description": "입력으로 주어진 두 수 A와 B 사이의 모든 정수를 오름차순으로 출력하시오.",
+    "input": "3 7",
+    "output": "3\n4\n5\n6\n7",
+    "examples": [
+      {
+        "input": "2 5",
+        "output": "2\n3\n4\n5"
+      },
+      {
+        "input": "10 12",
+        "output": "10\n11\n12"
+      }
+    ],
+    "hints": ["반복문을 사용하여 두 수 사이의 숫자를 순차적으로 출력하세요."]
+  },
+  {
+    "id": "3",
+    "title": "반평균",
+    "category": "반복문",
+    "difficulty": "Easy",
+    "description": "N명의 학생의 점수가 주어질 때 평균 점수를 구하는 프로그램을 작성하시오.",
+    "input": "5\n70 80 90 100 60",
+    "output": "80.0",
+    "examples": [
+      {
+        "input": "3\n50 75 95",
+        "output": "73.3"
+      },
+      {
+        "input": "4\n30 60 90 100",
+        "output": "70.0"
+      }
+    ],
+    "hints": ["점수들의 합을 구한 후, 학생 수로 나누어 평균을 구하세요."]
+  },
+  {
+    "id": "4",
+    "title": "핸드폰 판매",
+    "category": "반복문",
+    "difficulty": "Easy",
+    "description": "한 달 동안의 핸드폰 판매량이 주어질 때 총 판매량을 구하시오.",
+    "input": "5\n3 7 5 2 6",
+    "output": "23",
+    "examples": [
+      {
+        "input": "3\n1 2 3",
+        "output": "6"
+      },
+      {
+        "input": "4\n10 20 30 40",
+        "output": "100"
+      }
+    ],
+    "hints": ["모든 숫자를 더하여 총합을 구하세요."]
+  },
+  {
+    "id": "5",
+    "title": "무한 뺄셈",
+    "category": "반복문",
+    "difficulty": "Medium",
+    "description": "입력으로 주어진 N개의 숫자를 차례대로 뺀 결과를 출력하시오.",
+    "input": "5\n100 20 10 5 2",
+    "output": "63",
+    "examples": [
+      {
+        "input": "3\n50 30 10",
+        "output": "10"
+      },
+      {
+        "input": "4\n200 50 30 20",
+        "output": "100"
+      }
+    ],
+    "hints": ["첫 번째 숫자에서 두 번째 이후의 숫자들을 차례로 빼세요."]
+  },
+  {
+    "id": "6",
+    "title": "대소 비교",
+    "category": "조건문",
+    "difficulty": "Easy",
+    "description": "두 개의 정수가 주어질 때, 어느 숫자가 더 큰지를 판별하는 프로그램을 작성하시오.",
+    "input": "5 3",
+    "output": "5가 더 큽니다.",
+    "examples": [
+      {
+        "input": "2 8",
+        "output": "8가 더 큽니다."
+      },
+      {
+        "input": "10 10",
+        "output": "두 수는 같습니다."
+      }
+    ],
+    "hints": ["if 문을 활용하여 조건을 비교하세요."]
+  },
+  {
+    "id": "7",
+    "title": "나누기와 대소 비교",
+    "category": "조건문",
+    "difficulty": "Easy",
+    "description": "두 개의 정수가 주어질 때, 첫 번째 숫자가 두 번째 숫자로 나누어 떨어지는지 확인하시오.",
+    "input": "10 2",
+    "output": "10은 2로 나누어 떨어집니다.",
+    "examples": [
+      {
+        "input": "9 3",
+        "output": "9은 3으로 나누어 떨어집니다."
+      },
+      {
+        "input": "7 4",
+        "output": "7은 4로 나누어 떨어지지 않습니다."
+      }
+    ],
+    "hints": ["나머지를 확인하여 조건문을 사용하세요."]
+  },
+  {
+    "id": "8",
+    "title": "윤년 판별기",
+    "category": "조건문",
+    "difficulty": "Medium",
+    "description": "입력된 연도가 윤년인지 판별하는 프로그램을 작성하시오.",
+    "input": "2020",
+    "output": "윤년입니다.",
+    "examples": [
+      {
+        "input": "1900",
+        "output": "윤년이 아닙니다."
+      },
+      {
+        "input": "2000",
+        "output": "윤년입니다."
+      }
+    ],
+    "hints": [
+      "4로 나누어지고 100으로 나누어 떨어지면 윤년이 아닙니다. 그러나 400으로 나누어 떨어지면 윤년입니다."
+    ]
+  },
+  {
+    "id": "9",
+    "title": "ATM 기기",
+    "category": "조건문",
+    "difficulty": "Easy",
+    "description": "ATM에서 돈을 인출할 때 5의 배수인지 확인하는 프로그램을 작성하시오.",
+    "input": "40",
+    "output": "출금 가능합니다.",
+    "examples": [
+      {
+        "input": "42",
+        "output": "출금할 수 없습니다."
+      },
+      {
+        "input": "75",
+        "output": "출금 가능합니다."
+      }
+    ],
+    "hints": ["입력값이 5의 배수인지 확인하세요."]
+  },
+  {
+    "id": "10",
+    "title": "네 번째 좌표",
+    "category": "조건문",
+    "difficulty": "Medium",
+    "description": "세 개의 좌표가 주어질 때, 직사각형을 만들기 위한 네 번째 좌표를 구하는 프로그램을 작성하시오.",
+    "input": "1 2\n2 2\n2 3",
+    "output": "1 3",
+    "examples": [
+      {
+        "input": "5 5\n5 7\n7 5",
+        "output": "7 7"
+      },
+      {
+        "input": "10 10\n10 15\n15 10",
+        "output": "15 15"
+      }
+    ],
+    "hints": ["주어진 좌표들 중 하나씩만 등장하는 x, y 값을 찾으면 됩니다."]
+  },
+  {
+    "id": "11",
+    "title": "최솟값 구하기",
+    "category": "종합",
+    "difficulty": "Easy",
+    "description": "N개의 정수가 주어질 때, 그중 최솟값을 구하는 프로그램을 작성하시오.",
+    "input": "5\n10 20 3 40 50",
+    "output": "3",
+    "examples": [
+      {
+        "input": "4\n5 1 9 2",
+        "output": "1"
+      },
+      {
+        "input": "3\n100 200 50",
+        "output": "50"
+      }
+    ],
+    "hints": ["배열을 순회하며 최솟값을 찾으면 됩니다."]
+  },
+  {
+    "id": "12",
+    "title": "제곱 구현",
+    "category": "종합",
+    "difficulty": "Easy",
+    "description": "입력으로 주어진 두 수 A와 B에 대해 A의 B제곱을 구하는 프로그램을 작성하시오.",
+    "input": "2 3",
+    "output": "8",
+    "examples": [
+      {
+        "input": "5 2",
+        "output": "25"
+      },
+      {
+        "input": "3 3",
+        "output": "27"
+      }
+    ],
+    "hints": ["Math.pow() 또는 반복문을 이용할 수 있습니다."]
+  },
+  {
+    "id": "13",
+    "title": "요일 구하기",
+    "category": "종합",
+    "difficulty": "Medium",
+    "description": "입력된 날짜의 요일을 출력하는 프로그램을 작성하시오.",
+    "input": "2024 3 21",
+    "output": "Thursday",
+    "examples": [
+      {
+        "input": "2022 12 25",
+        "output": "Sunday"
+      },
+      {
+        "input": "2000 1 1",
+        "output": "Saturday"
+      }
+    ],
+    "hints": ["Zeller의 공식 또는 Date 객체를 활용하세요."]
+  },
+  {
+    "id": "14",
+    "title": "OX 퀴즈",
+    "category": "배열",
+    "difficulty": "Easy",
+    "description": "OX 문제의 정답 여부가 연속적으로 주어질 때, 연속된 O의 개수만큼 점수를 더하는 프로그램을 작성하시오.",
+    "input": "5\nO O X O O",
+    "output": "4",
+    "examples": [
+      {
+        "input": "6\nO X O O X O",
+        "output": "3"
+      },
+      {
+        "input": "3\nX X X",
+        "output": "0"
+      }
+    ],
+    "hints": ["연속된 'O' 개수를 카운트하여 점수를 계산하면 됩니다."]
+  },
+  {
+    "id": "15",
+    "title": "Two Sum",
+    "category": "배열",
+    "difficulty": "Medium",
+    "description": "정수 배열과 목표 숫자가 주어질 때, 합이 목표 숫자가 되는 두 수의 인덱스를 찾아 반환하시오.",
+    "input": "4\n2 7 11 15\n9",
+    "output": "0 1",
+    "examples": [
+      {
+        "input": "5\n1 2 3 4 5\n6",
+        "output": "1 3"
+      },
+      {
+        "input": "3\n3 3 6\n6",
+        "output": "0 1"
+      }
+    ],
+    "hints": ["해시맵을 사용하면 O(n) 시간 복잡도로 해결할 수 있습니다."]
+  },
+  {
+    "id": "16",
+    "title": "괄호 짝 찾기",
+    "category": "스택",
+    "difficulty": "Medium",
+    "description": "문자열이 올바른 괄호 쌍을 이루는지 판별하는 프로그램을 작성하시오.",
+    "input": "()()",
+    "output": "YES",
+    "examples": [
+      {
+        "input": "(())",
+        "output": "YES"
+      },
+      {
+        "input": "(()",
+        "output": "NO"
+      }
+    ],
+    "hints": ["스택을 활용하여 괄호를 관리하세요."]
+  },
+  {
+    "id": "17",
+    "title": "프린터 출력",
+    "category": "큐",
+    "difficulty": "Medium",
+    "description": "인쇄 대기열에서 특정 문서가 몇 번째로 출력되는지 확인하는 프로그램을 작성하시오.",
+    "input": "4\n2 1 3 2\n2",
+    "output": "1",
+    "examples": [
+      {
+        "input": "3\n1 2 3\n0",
+        "output": "3"
+      },
+      {
+        "input": "5\n4 2 5 3 1\n2",
+        "output": "2"
+      }
+    ],
+    "hints": ["우선순위 큐를 활용하세요."]
+  },
+  {
+    "id": "18",
+    "title": "숫자 빈도수 구하기",
+    "category": "배열",
+    "difficulty": "Easy",
+    "description": "입력된 숫자들에서 특정 숫자의 등장 횟수를 구하는 프로그램을 작성하시오.",
+    "input": "6\n1 2 3 4 2 2\n2",
+    "output": "3",
+    "examples": [
+      {
+        "input": "5\n5 5 5 5 5\n5",
+        "output": "5"
+      },
+      {
+        "input": "3\n1 1 2\n1",
+        "output": "2"
+      }
+    ],
+    "hints": ["배열을 순회하며 등장 횟수를 카운트하세요."]
+  },
+  {
+    "id": "19",
+    "title": "DFS 탐색",
+    "category": "그래프",
+    "difficulty": "Medium",
+    "description": "그래프가 주어졌을 때, DFS(깊이 우선 탐색) 순서를 출력하는 프로그램을 작성하시오.",
+    "input": "5\n1 2\n1 3\n2 4\n2 5\n3 5\n1",
+    "output": "1 2 4 5 3",
+    "examples": [
+      {
+        "input": "4\n1 2\n2 3\n3 4\n4 1\n2",
+        "output": "2 1 4 3"
+      },
+      {
+        "input": "3\n1 2\n2 3\n3 1\n3",
+        "output": "3 2 1"
+      }
+    ],
+    "hints": ["스택을 활용하여 DFS를 구현하세요."]
+  },
+  {
+    "id": "20",
+    "title": "N과 M (1)",
+    "category": "백트래킹",
+    "difficulty": "Medium",
+    "description": "자연수 N과 M이 주어질 때, 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열을 모두 출력하는 프로그램을 작성하시오.",
+    "input": "3 2",
+    "output": "1 2\n1 3\n2 1\n2 3\n3 1\n3 2",
+    "examples": [
+      {
+        "input": "4 2",
+        "output": "1 2\n1 3\n1 4\n2 1\n2 3\n2 4\n3 1\n3 2\n3 4\n4 1\n4 2\n4 3"
+      }
+    ],
+    "hints": ["백트래킹을 활용하여 모든 조합을 구하세요."]
+  },
+  {
+    "id": "21",
+    "title": "1로 만들기",
+    "category": "동적 계획법",
+    "difficulty": "Hard",
+    "description": "정수 X가 주어질 때, X를 1로 만들기 위해 사용할 수 있는 연산이 다음과 같을 때 최소 연산 횟수를 구하는 프로그램을 작성하시오. 연산: 1) X가 3으로 나누어떨어지면 3으로 나눈다. 2) X가 2로 나누어떨어지면 2로 나눈다. 3) X에서 1을 뺀다.",
+    "input": "10",
+    "output": "3",
+    "examples": [
+      {
+        "input": "2",
+        "output": "1"
+      },
+      {
+        "input": "100",
+        "output": "7"
+      }
+    ],
+    "hints": ["DP를 활용하면 O(N) 안에 해결할 수 있습니다."]
+  },
+  {
+    "id": "22",
+    "title": "소수 찾기",
+    "category": "수학",
+    "difficulty": "Easy",
+    "description": "입력된 수 중 소수의 개수를 구하는 프로그램을 작성하시오.",
+    "input": "4\n1 3 5 7",
+    "output": "3",
+    "examples": [
+      {
+        "input": "5\n10 11 12 13 14",
+        "output": "2"
+      }
+    ],
+    "hints": ["소수 판별은 O(√N)으로 구현할 수 있습니다."]
+  },
+  {
+    "id": "23",
+    "title": "최대 공약수와 최소 공배수",
+    "category": "수학",
+    "difficulty": "Easy",
+    "description": "두 정수 A, B가 주어졌을 때 A와 B의 최대 공약수와 최소 공배수를 구하는 프로그램을 작성하시오.",
+    "input": "24 18",
+    "output": "6 72",
+    "examples": [
+      {
+        "input": "100 75",
+        "output": "25 300"
+      }
+    ],
+    "hints": ["유클리드 호제법을 활용하여 최대공약수를 구하세요."]
+  },
+  {
+    "id": "24",
+    "title": "스택 수열",
+    "category": "스택",
+    "difficulty": "Medium",
+    "description": "1부터 N까지의 수를 스택을 이용해 push, pop 연산을 수행하여 특정 수열을 만들 수 있는지 확인하는 프로그램을 작성하시오.",
+    "input": "5\n1 2 5 3 4",
+    "output": "NO",
+    "examples": [
+      {
+        "input": "8\n4 3 6 8 7 5 2 1",
+        "output": "+ + + + - - + + - + + - - - - -"
+      }
+    ],
+    "hints": ["스택을 활용하여 수열을 구성할 수 있는지 확인하세요."]
+  },
+  {
+    "id": "25",
+    "title": "DFS와 BFS",
+    "category": "그래프",
+    "difficulty": "Medium",
+    "description": "그래프가 주어졌을 때, DFS와 BFS를 실행한 결과를 출력하는 프로그램을 작성하시오.",
+    "input": "4 5 1\n1 2\n1 3\n1 4\n2 4\n3 4",
+    "output": "1 2 4 3\n1 2 3 4",
+    "examples": [
+      {
+        "input": "5 5 3\n5 4\n5 2\n1 2\n3 4\n3 1",
+        "output": "3 1 2 5 4\n3 1 4 2 5"
+      }
+    ],
+    "hints": ["DFS는 스택, BFS는 큐를 활용하면 쉽게 해결할 수 있습니다."]
+  },
+  {
+    "id": "26",
+    "title": "미로 탐색",
+    "category": "BFS",
+    "difficulty": "Hard",
+    "description": "N×M 크기의 미로가 주어질 때, (1,1)에서 출발하여 (N,M)까지 도달하는 최소 이동 횟수를 구하는 프로그램을 작성하시오.",
+    "input": "4 6\n101111\n101010\n101011\n111011",
+    "output": "15",
+    "examples": [
+      {
+        "input": "4 4\n1111\n0001\n1111\n1111",
+        "output": "7"
+      }
+    ],
+    "hints": ["BFS를 활용하면 최단 경로를 구할 수 있습니다."]
+  },
+  {
+    "id": "27",
+    "title": "회의실 배정",
+    "category": "그리디",
+    "difficulty": "Medium",
+    "description": "회의 N개가 주어질 때, 회의 시간이 겹치지 않도록 최대한 많은 회의를 배정하는 프로그램을 작성하시오.",
+    "input": "5\n1 4\n2 3\n3 5\n5 7\n6 8",
+    "output": "3",
+    "examples": [
+      {
+        "input": "3\n1 2\n2 3\n3 4",
+        "output": "3"
+      }
+    ],
+    "hints": [
+      "그리디 알고리즘을 활용하여 종료 시간이 빠른 순서대로 배정하세요."
+    ]
+  },
+  {
+    "id": "28",
+    "title": "N-Queen",
+    "category": "백트래킹",
+    "difficulty": "Hard",
+    "description": "N×N 크기의 체스판 위에 N개의 퀸을 서로 공격하지 않도록 배치하는 경우의 수를 구하는 프로그램을 작성하시오.",
+    "input": "8",
+    "output": "92",
+    "examples": [
+      {
+        "input": "4",
+        "output": "2"
+      }
+    ],
+    "hints": ["재귀와 백트래킹을 활용하세요."]
+  },
+  {
+    "id": "29",
+    "title": "RGB 거리",
+    "category": "동적 계획법",
+    "difficulty": "Medium",
+    "description": "각 집을 빨강, 초록, 파랑 중 하나의 색으로 칠할 때, 인접한 집이 같은 색이 되지 않도록 하면서 최소 비용을 구하는 프로그램을 작성하시오.",
+    "input": "3\n26 40 83\n49 60 57\n13 89 99",
+    "output": "96",
+    "examples": [
+      {
+        "input": "2\n1 100 1\n100 1 100",
+        "output": "2"
+      }
+    ],
+    "hints": ["DP를 활용하여 최소 비용을 구하세요."]
+  },
+  {
+    "id": "30",
+    "title": "수 정렬하기",
+    "category": "정렬",
+    "difficulty": "Easy",
+    "description": "N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램을 작성하시오.",
+    "input": "5\n5 2 3 4 1",
+    "output": "1 2 3 4 5",
+    "examples": [
+      {
+        "input": "3\n3 1 2",
+        "output": "1 2 3"
+      }
+    ],
+    "hints": ["퀵 정렬 또는 병합 정렬을 활용할 수 있습니다."]
+  },
+  {
+    "id": "31",
+    "title": "숫자 카드",
+    "category": "이진 탐색",
+    "difficulty": "Medium",
+    "description": "상근이가 숫자 카드를 여러 장 가지고 있을 때, 주어진 숫자가 있는지 확인하는 프로그램을 작성하시오.",
+    "input": "5\n6 3 2 10 -10\n8\n10 9 -5 2 3 4 5 -10",
+    "output": "1 0 0 1 1 0 0 1",
+    "examples": [
+      {
+        "input": "4\n4 5 7 9\n3\n5 6 9",
+        "output": "1 0 1"
+      }
+    ],
+    "hints": ["이진 탐색을 활용하면 O(log N) 안에 해결할 수 있습니다."]
+  },
+  {
+    "id": "32",
+    "title": "ATM 대기 시간 최소화",
+    "category": "그리디",
+    "difficulty": "Medium",
+    "description": "각 사람이 인출하는데 걸리는 시간이 주어질 때, 모든 사람이 돈을 인출하는데 걸리는 최소 시간을 구하는 프로그램을 작성하시오.",
+    "input": "5\n3 1 4 3 2",
+    "output": "32",
+    "examples": [
+      {
+        "input": "4\n1 2 3 4",
+        "output": "20"
+      }
+    ],
+    "hints": ["작은 수부터 정렬하여 더하면 최소 시간이 나옵니다."]
+  },
+  {
+    "id": "33",
+    "title": "Dijkstra 최단 경로",
+    "category": "최단 경로",
+    "difficulty": "Hard",
+    "description": "N개의 정점과 M개의 간선으로 이루어진 그래프가 주어질 때, 특정 시작점에서 모든 정점까지의 최단 거리를 구하는 프로그램을 작성하시오.",
+    "input": "6 9\n1\n5 1 1\n1 2 2\n1 3 5\n2 3 3\n2 4 4\n3 4 1\n3 5 2\n4 5 1\n4 6 6",
+    "output": "0 2 3 4 5 10",
+    "examples": [
+      {
+        "input": "4 4\n1\n1 2 4\n1 3 2\n3 2 1\n2 4 7",
+        "output": "0 3 2 10"
+      }
+    ],
+    "hints": ["다익스트라 알고리즘을 우선순위 큐로 구현하세요."]
+  },
+  {
+    "id": "34",
+    "title": "플로이드 워셜",
+    "category": "최단 경로",
+    "difficulty": "Hard",
+    "description": "N개의 정점이 주어졌을 때, 모든 정점에서 모든 정점으로의 최단 거리를 구하는 프로그램을 작성하시오.",
+    "input": "4\n0 5 INF INF\n5 0 3 INF\nINF 3 0 1\nINF INF 1 0",
+    "output": "0 5 8 9\n5 0 3 4\n8 3 0 1\n9 4 1 0",
+    "examples": [
+      {
+        "input": "3\n0 2 INF\n2 0 3\nINF 3 0",
+        "output": "0 2 5\n2 0 3\n5 3 0"
+      }
+    ],
+    "hints": ["플로이드 워셜 알고리즘을 활용하세요."]
+  },
+  {
+    "id": "35",
+    "title": "괄호 문자열 검사",
+    "category": "스택",
+    "difficulty": "Easy",
+    "description": "괄호로 이루어진 문자열이 올바른 괄호 문자열인지 판별하는 프로그램을 작성하시오.",
+    "input": "(())()",
+    "output": "YES",
+    "examples": [
+      {
+        "input": "(()))",
+        "output": "NO"
+      }
+    ],
+    "hints": ["스택을 활용하여 올바른 괄호를 검사하세요."]
+  },
+  {
+    "id": "36",
+    "title": "트라이(Trie) 구현",
+    "category": "자료구조",
+    "difficulty": "Hard",
+    "description": "문자열이 N개 주어질 때, 특정 문자열이 존재하는지 빠르게 탐색할 수 있는 자료구조를 구현하시오.",
+    "input": "5\nhello world trie data structure\n2\ndata hello",
+    "output": "YES\nYES",
+    "examples": [
+      {
+        "input": "3\napple banana orange\n2\napple mango",
+        "output": "YES\nNO"
+      }
+    ],
+    "hints": ["Trie 자료구조를 구현하면 O(N) 시간에 해결할 수 있습니다."]
+  },
+  {
+    "id": "37",
+    "title": "피보나치 수열",
+    "category": "재귀",
+    "difficulty": "Easy",
+    "description": "정수 N이 주어질 때, 피보나치 수열의 N번째 항을 출력하는 프로그램을 작성하시오.",
+    "input": "5",
+    "output": "5",
+    "examples": [
+      {
+        "input": "10",
+        "output": "55"
+      }
+    ],
+    "hints": ["재귀 또는 동적 계획법(DP)을 활용하여 구현할 수 있습니다."]
+  },
+  {
+    "id": "38",
+    "title": "이진 탐색",
+    "category": "이진 탐색",
+    "difficulty": "Medium",
+    "description": "정렬된 배열과 찾고자 하는 수가 주어질 때, 해당 수의 인덱스를 반환하는 프로그램을 작성하시오.",
+    "input": "[1, 3, 5, 7, 9], target = 5",
+    "output": "2",
+    "examples": [
+      {
+        "input": "[2, 4, 6, 8, 10], target = 4",
+        "output": "1"
+      }
+    ],
+    "hints": ["이진 탐색을 활용하여 O(log N) 시간 복잡도로 구현하세요."]
+  },
+  {
+    "id": "39",
+    "title": "카드 정렬하기",
+    "category": "그리디",
+    "difficulty": "Hard",
+    "description": "N개의 카드 묶음을 최소한의 비교 횟수로 합치는 프로그램을 작성하시오.",
+    "input": "3\n10 20 40",
+    "output": "100",
+    "examples": [
+      {
+        "input": "4\n5 10 20 30",
+        "output": "85"
+      }
+    ],
+    "hints": ["우선순위 큐를 활용하여 최소 비용으로 합치는 전략을 사용하세요."]
+  },
+  {
+    "id": "40",
+    "title": "특정 거리의 도시 찾기",
+    "category": "그래프",
+    "difficulty": "Hard",
+    "description": "N개의 도시와 도로가 주어질 때, 특정 거리 K만큼 떨어진 도시를 찾는 프로그램을 작성하시오.",
+    "input": "4 4 2 1\n1 2\n1 3\n2 3\n2 4",
+    "output": "4",
+    "examples": [
+      {
+        "input": "4 3 2 1\n1 2\n1 3\n1 4",
+        "output": "-1"
+      }
+    ],
+    "hints": ["BFS를 활용하여 최단 거리를 탐색하세요."]
+  },
+  {
+    "id": "41",
+    "title": "1, 2, 3 더하기",
+    "category": "동적 계획법",
+    "difficulty": "Medium",
+    "description": "정수 N이 주어졌을 때, 1, 2, 3의 합으로 N을 만들 수 있는 경우의 수를 구하시오.",
+    "input": "4",
+    "output": "7",
+    "examples": [
+      {
+        "input": "7",
+        "output": "44"
+      }
+    ],
+    "hints": [
+      "DP를 활용하여 f(n) = f(n-1) + f(n-2) + f(n-3) 형태로 구현하세요."
+    ]
+  },
+  {
+    "id": "42",
+    "title": "섬의 개수",
+    "category": "그래프 탐색",
+    "difficulty": "Medium",
+    "description": "0과 1로 이루어진 지도가 주어질 때, 섬(연결된 1의 집합)의 개수를 구하는 프로그램을 작성하시오.",
+    "input": "4 5\n1 1 0 0 0\n1 1 0 1 1\n0 0 0 0 0\n0 1 1 0 0",
+    "output": "3",
+    "examples": [
+      {
+        "input": "3 3\n1 1 1\n1 1 1\n1 1 1",
+        "output": "1"
+      }
+    ],
+    "hints": ["DFS 또는 BFS를 활용하여 연결된 영역을 탐색하세요."]
+  },
+  {
+    "id": "43",
+    "title": "도시 분할 계획",
+    "category": "최소 신장 트리",
+    "difficulty": "Hard",
+    "description": "N개의 집과 M개의 도로가 주어질 때, 최소한의 비용으로 모든 집을 연결하는 프로그램을 작성하시오.",
+    "input": "7 12\n1 2 3\n1 3 2\n3 2 1\n2 5 2\n5 1 5\n5 4 1\n4 2 3\n3 4 4\n7 3 6\n7 5 8\n7 6 7\n6 4 5",
+    "output": "8",
+    "examples": [
+      {
+        "input": "5 7\n1 2 5\n1 3 4\n2 3 2\n2 4 7\n3 4 6\n3 5 11\n4 5 3",
+        "output": "15"
+      }
+    ],
+    "hints": ["크루스칼 알고리즘을 활용하여 최소 신장 트리를 만드세요."]
+  },
+  {
+    "id": "44",
+    "title": "회의실 배정",
+    "category": "그리디",
+    "difficulty": "Medium",
+    "description": "N개의 회의 시간이 주어졌을 때, 최대한 많은 회의를 배정하는 프로그램을 작성하시오.",
+    "input": "3\n1 3\n2 4\n3 5",
+    "output": "2",
+    "examples": [
+      {
+        "input": "5\n1 2\n3 4\n5 6\n7 8\n9 10",
+        "output": "5"
+      }
+    ],
+    "hints": ["종료 시간이 빠른 순서대로 정렬하여 배정하세요."]
+  },
+  {
+    "id": "45",
+    "title": "동전 교환",
+    "category": "동적 계획법",
+    "difficulty": "Medium",
+    "description": "N개의 동전으로 목표 금액을 만들 수 있는 최소 동전 개수를 구하는 프로그램을 작성하시오.",
+    "input": "3 15\n1 5 12",
+    "output": "3",
+    "examples": [
+      {
+        "input": "4 17\n1 2 5 10",
+        "output": "3"
+      }
+    ],
+    "hints": ["DP를 활용하여 f(x) = min(f(x-k) + 1) 형태로 구현하세요."]
+  },
+  {
+    "id": "46",
+    "title": "경로 찾기",
+    "category": "그래프",
+    "difficulty": "Medium",
+    "description": "N개의 노드가 주어질 때, 두 노드 간 이동 가능한 경로를 찾는 프로그램을 작성하시오.",
+    "input": "3\n0 1 0\n0 0 1\n1 0 0",
+    "output": "1 1 1\n1 1 1\n1 1 1",
+    "examples": [
+      {
+        "input": "4\n0 1 0 0\n0 0 1 0\n0 0 0 1\n1 0 0 0",
+        "output": "1 1 1 1\n1 1 1 1\n1 1 1 1\n1 1 1 1"
+      }
+    ],
+    "hints": ["플로이드-워셜 알고리즘을 활용하여 경로를 구하세요."]
+  },
+  {
+    "id": "47",
+    "title": "문자열 압축",
+    "category": "문자열",
+    "difficulty": "Medium",
+    "description": "같은 문자가 연속으로 나타나는 부분을 압축하여 문자열을 반환하는 프로그램을 작성하시오. 단, 압축된 문자열이 원본보다 길 경우 원본 문자열을 반환한다.",
+    "input": "aabbbcccc",
+    "output": "a2b3c4",
+    "examples": [
+      {
+        "input": "aaabaaaa",
+        "output": "a3b1a4"
+      }
+    ],
+    "hints": ["문자열을 순차적으로 탐색하면서 연속된 문자를 세어 압축하세요."]
+  },
+  {
+    "id": "48",
+    "title": "마법의 손톱",
+    "category": "그리디",
+    "difficulty": "Hard",
+    "description": "마법의 손톱이 있다는 소문을 들은 주인공은 주어진 금액으로 최대한 많은 손톱을 사려고 한다. 손톱을 살 수 있는 다양한 금액이 주어졌을 때, 최소한의 금액으로 목표 금액을 만드는 방법을 구하는 프로그램을 작성하시오.",
+    "input": "7 5\n1 3 5 6 8 10",
+    "output": "3",
+    "examples": [
+      {
+        "input": "5 7\n2 5 8 12 15",
+        "output": "2"
+      }
+    ],
+    "hints": [
+      "그리디 알고리즘을 활용하여 최소한의 동전으로 목표 금액을 맞추세요."
+    ]
+  },
+  {
+    "id": "49",
+    "title": "합이 0인 부분 수열",
+    "category": "배열",
+    "difficulty": "Medium",
+    "description": "주어진 배열에서 합이 0인 부분 수열이 있는지 확인하는 프로그램을 작성하시오.",
+    "input": "[1, -1, 2, 3, -2]",
+    "output": "YES",
+    "examples": [
+      {
+        "input": "[1, 2, 3, 4, 5]",
+        "output": "NO"
+      }
+    ],
+    "hints": ["부분 수열을 찾을 때 합이 0인 경우가 있는지 확인하세요."]
+  },
+  {
+    "id": "50",
+    "title": "택시 기하학",
+    "category": "수학",
+    "difficulty": "Hard",
+    "description": "두 점 사이의 거리 계산을 통해 두 점 사이의 택시 거리(Taxi Distance)를 구하는 프로그램을 작성하시오. 택시 거리는 두 점의 수평 거리와 수직 거리의 합이다.",
+    "input": "(1, 2), (3, 5)",
+    "output": "5",
+    "examples": [
+      {
+        "input": "(1, 1), (2, 2)",
+        "output": "2"
+      }
+    ],
+    "hints": [
+      "택시 기하학에서 두 점 사이의 거리는 |x2 - x1| + |y2 - y1| 입니다."
+    ]
+  },
+  {
+    "id": "51",
+    "title": "행렬 곱셈",
+    "category": "행렬",
+    "difficulty": "Hard",
+    "description": "두 행렬이 주어졌을 때, 두 행렬의 곱을 구하는 프로그램을 작성하시오. 행렬의 곱셈을 구현하는 문제입니다.",
+    "input": "2 3\n1 2 3\n4 5 6\n3 2\n7 8\n9 10\n11 12",
+    "output": "58 64\n139 154",
+    "examples": [
+      {
+        "input": "3 3\n1 2 3\n4 5 6\n7 8 9\n3 3\n1 1 1\n1 1 1",
+        "output": "6 6 6\n15 15 15\n24 24 24"
+      }
+    ],
+    "hints": [
+      "행렬 곱셈은 첫 번째 행렬의 행과 두 번째 행렬의 열을 곱하여 더하는 방식입니다."
+    ]
+  },
+  {
+    "id": "52",
+    "title": "완전 탐색으로 조합 찾기",
+    "category": "완전 탐색",
+    "difficulty": "Medium",
+    "description": "주어진 배열에서 합이 특정 값이 되는 모든 조합을 찾는 프로그램을 작성하시오.",
+    "input": "[1, 2, 3, 4], target = 5",
+    "output": "[1, 4], [2, 3]",
+    "examples": [
+      {
+        "input": "[1, 2, 3, 4, 5], target = 6",
+        "output": "[1, 5], [2, 4]"
+      }
+    ],
+    "hints": ["완전 탐색을 활용하여 모든 가능한 조합을 찾아보세요."]
+  },
+  {
+    "id": "53",
+    "title": "가장 긴 팰린드롬",
+    "category": "문자열",
+    "difficulty": "Medium",
+    "description": "주어진 문자열에서 가장 긴 팰린드롬 부분 문자열을 구하는 프로그램을 작성하시오.",
+    "input": "babad",
+    "output": "bab",
+    "examples": [
+      {
+        "input": "cbbd",
+        "output": "bb"
+      }
+    ],
+    "hints": [
+      "팰린드롬을 확인하는 방법과 중심을 기준으로 확장하는 방법을 고려하세요."
+    ]
+  },
+  {
+    "id": "54",
+    "title": "문자열 뒤집기",
+    "category": "문자열",
+    "difficulty": "Easy",
+    "description": "주어진 문자열을 뒤집어서 출력하는 프로그램을 작성하시오.",
+    "input": "hello",
+    "output": "olleh",
+    "examples": [
+      {
+        "input": "world",
+        "output": "dlrow"
+      }
+    ],
+    "hints": ["문자열을 뒤집는 함수나 방법을 활용하세요."]
+  },
+  {
+    "id": "55",
+    "title": "이진수로 변환",
+    "category": "수학",
+    "difficulty": "Easy",
+    "description": "주어진 정수를 이진수로 변환하여 출력하는 프로그램을 작성하시오.",
+    "input": "10",
+    "output": "1010",
+    "examples": [
+      {
+        "input": "7",
+        "output": "111"
+      }
+    ],
+    "hints": ["정수를 2로 나누고 나머지를 기록하여 이진수를 구할 수 있습니다."]
+  },
+  {
+    "id": "56",
+    "title": "단어 개수 세기",
+    "category": "문자열",
+    "difficulty": "Easy",
+    "description": "주어진 문장에서 단어의 개수를 세는 프로그램을 작성하시오.",
+    "input": "The quick brown fox jumps over the lazy dog",
+    "output": "9",
+    "examples": [
+      {
+        "input": "Hello World",
+        "output": "2"
+      }
+    ],
+    "hints": ["문자열을 공백을 기준으로 분리하여 단어의 개수를 세세요."]
+  }
+]
