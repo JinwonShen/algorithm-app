@@ -3,7 +3,7 @@ import problemsData from '../data/algorithm_problems.json'
 import Link from "next/link";
 
 type Problem = {
-  id: number;
+  id: string;
   title: string;
   difficulty: string;
 }
