@@ -1,34 +1,97 @@
+import { useState } from "react";
+import problemsData from "../data/algorithm_problems.json";
 import Link from "next/link";
-import { GetStaticProps } from "next";
 
 type Problem = {
   id: string;
   title: string;
+  category: string;
   difficulty: string;
-}
+};
 
-export const getStaticProps: GetStaticProps = async () => {
-    const res = await fetch('http://localhost:3000/api/problems')
-    const problems: Problem[] = await res.json();
+export default function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOption, setSortOption] = useState("default");
+  const [selectedCategory, setSelectedCategory] = useState("전체");
 
-    return {
-      props: {problems}
-    }
-}
+  const filteredProblems = problemsData
+    .filter((problem) => {
+      const matchesSearch = (problem.title + " " + problem.category)
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const matchesCategory =
+        selectedCategory === "전체" || problem.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    })
+    .sort((a: Problem, b: Problem): number => {
+  if (sortOption === "title") {
+    return a.title.localeCompare(b.title);
+  } else if (sortOption === "difficulty") {
+    const difficultyOrder: Record<Problem["difficulty"], number> = {
+      Easy: 1,
+      Medium: 2,
+      Hard: 3,
+    };
+    return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
+  }
+  return 0;
+}).sort((a: Problem, b: Problem): number => {
+  if (sortOption === "title") {
+    return a.title.localeCompare(b.title);
+  } else if (sortOption === "difficulty") {
+    const difficultyOrder: Record<Problem["difficulty"], number> = {
+      Easy: 1,
+      Medium: 2,
+      Hard: 3,
+    };
+    return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
+  }
+  return 0;
+})
 
-export default function Home({ problems }: { problems: Problem[] }) {
   return (
     <div>
-      <h1>📝 알고리즘 테스트</h1>
+      <h1>문제 리스트</h1>
+
+      <input
+        type="text"
+        placeholder="문제 제목이나 카테고리를 입력하세요"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
+      <div>
+          <label>정렬:</label>
+          <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+            <option value="default">기본순</option>
+            <option value="title">제목순</option>
+            <option value="difficulty">난이도순</option>
+          </select>
+
+          <label>카테고리:</label>
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+          >
+            <option value="전체">전체</option>
+            {/* 중복 제거된 카테고리 자동 생성 */}
+            {[...new Set(problemsData.map((p) => p.category))].map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+
       <ul>
-        {problems.map((problem) => (
+        {filteredProblems.map((problem: Problem) => (
           <li key={problem.id}>
             <Link href={`/problem/${problem.id}`}>
-              {problem.title} ({problem.difficulty})
+              {problem.title} | {problem.category} | {problem.difficulty}
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  )
+  );
 }
