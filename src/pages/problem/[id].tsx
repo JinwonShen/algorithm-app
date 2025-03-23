@@ -3,6 +3,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import problemsData from '../../data/algorithm_problems.json';
+import styles from "../../styles/[id].module.css"
 
 const CodeMirror = dynamic(() => import("@uiw/react-codemirror"), {ssr: false})
 import { javascript } from "@codemirror/lang-javascript";
@@ -81,63 +82,74 @@ export default function ProblemDetail({ problem }: { problem: Problem }) {
   }
 
   return (
-    <div>
-      <h1>{problem.title}</h1>
-      <p><strong>카테고리:</strong> {problem.category}</p>
-      <p><strong>난이도:</strong> {problem.difficulty}</p>
-      <p><strong>설명:</strong> {problem.description}</p>
+    <div className="wrap">
+      <h1 className={styles.title}>{problem.title}</h1>
 
-      <h2>📝 입력 예제</h2>
-      <pre>{problem.input}</pre>
+      <div className={styles.problemDesc}>
+        <p><span>카테고리 :</span> {problem.category}</p> 
+        <p><span>난이도 :</span> {problem.difficulty}</p>
+        <p><span>설명 :</span> {problem.description}</p>
+      </div>
 
-      <h2>📌 출력 예제</h2>
-      <pre>{problem.output}</pre>
+      <div className={styles.problemContainer}>
+        <div className={styles.problemInfo}>
+          <h2 className={styles.problemSubTitle}>📝 입력 예제</h2>
+          <pre className={styles.problemInput}>{problem.input}</pre>
 
-      <h2>🔍 추가 예제</h2>
-      {problem.examples.map((example, index) => (
-        <div key={index}>
-          <p><strong>입력:</strong></p>
-          <pre>{example.input}</pre>
-          <p><strong>출력:</strong></p>
-          <pre>{example.output}</pre>
+          <h2 className={styles.problemSubTitle}>📌 출력 예제</h2>
+          <pre className={styles.problemOutput}>{problem.output}</pre>
+
+          <h2 className={styles.problemSubTitle}>🔍 추가 예제</h2>
+          {problem.examples.map((example, index) => (
+            <div key={index}>
+              <p><strong>입력:</strong></p>
+              <pre className={styles.exampleInput}>{example.input}</pre>
+              <p><strong>출력:</strong></p>
+              <pre className={styles.exampleOutput}>{example.output}</pre>
+            </div>
+          ))}
+
+          {problem.hints.length > 0 && (
+            <>
+              <h2 className={styles.problemSubTitle}>💡 힌트</h2>
+              <ul>
+                {problem.hints.map((hint, index) => (
+                  <li key={index} className={styles.hint}>{hint}</li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
-      ))}
 
-      {problem.hints.length > 0 && (
-        <>
-          <h2>💡 힌트</h2>
-          <ul>
-            {problem.hints.map((hint, index) => (
-              <li key={index}>{hint}</li>
-            ))}
-          </ul>
-        </>
-      )}
+        <div className={styles.problemCode}>
+          {/* 코드 입력 UI */}
+          <h2 className={styles.problemSubTitle}>💻 코드 실행</h2>
+          <CodeMirror 
+            className={styles.codeMirror}
+            value={code}
+            extensions={[javascript()]}
+            onChange={(value) => setCode(value)}
+          />
+          <div className={styles.buttonContainer}>
+            <button onClick={runCode} className={styles.button}>▶ 실행</button>
+            <button onClick={submitCode} className={styles.button}>🚀 제출</button>
+          </div>
 
-      <button onClick={() => router.push("/")}>🏠 홈으로 돌아가기</button>
+          {/* 실행 결과 표시 */}
+          <h2 className={styles.problemSubTitle}>📌 실행 결과</h2>
+          <pre className={styles.problemResult}>{output}</pre>
 
-      {/* 코드 입력 UI */}
-      <h2>💻 코드 실행</h2>
-      <CodeMirror 
-        value={code}
-        height="200px"
-        extensions={[javascript()]}
-        onChange={(value) => setCode(value)}
-      />
-      <button onClick={runCode}>▶ 실행</button>
+          {/* 제출 버튼 추가 */}
 
-      {/* 실행 결과 표시 */}
-      <h2>📌 실행 결과</h2>
-      <pre>{output}</pre>
+          {/* 정답 여부 표시 */}
+          {result && <h2 className={styles.problemSubTitle}>{result}</h2>}
+          <div className={styles.buttonContainer}>
+            <button onClick={() => router.push('/')} className={styles.button}>🏠 홈으로 돌아가기</button>
+            <button onClick={() => router.push('/myProblems')} className={styles.button}>📜 내가 푼 문제 보기</button>
+          </div>
+        </div>
+      </div>
 
-      {/* 제출 버튼 추가 */}
-      <button onClick={submitCode}>🚀 제출</button>
-
-      {/* 정답 여부 표시 */}
-      {result && <h2>{result}</h2>}
-
-      <button onClick={() => router.push('/')}>🏠 홈으로 돌아가기</button>
-      <button onClick={() => router.push('/my-problems')}>📜 내가 푼 문제 보기</button>
     </div>
   )
 }

@@ -1,42 +1,45 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* 기본 리셋 */
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body {
+  font-family: 'Helvetica Neue', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  /* background-color: #f9f9f9; */
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* 링크 스타일 */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* 리스트 스타일 제거 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 입력 요소 */
+input, select, button {
+  font-family: inherit;
+  /* padding: 0.5rem; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 전역 클래스 요소 */
+.wrap {
+  padding: 2.5% 5% 5%;
+  /* max-width: 1080px; */
 }

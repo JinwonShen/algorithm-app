@@ -1,0 +1,85 @@
+
+.title {
+  padding-bottom: 24px;
+}
+
+/* 검색창 영역 */
+.searchInput {
+  width: 100%;
+  padding: 12px;
+}
+
+.searchInput:focus {
+  border: 1px solid #000;
+}
+
+/* 필터 영역 */
+.filterContainer {
+  width: 100%;
+  margin: 12px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filterContainer label {
+  margin-right: 6px;
+}
+
+.filterContainer select {
+  padding: 12px
+}
+
+.filterContainer .filterSort {
+  margin-right: 12px;
+}
+
+/* 문제 리스트 영역 */
+.problemListContainer li:first-child {
+  border-top: 1px solid #dfdfdf;
+}
+
+.problemListContainer li {
+  padding: 12px 24px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.problemListContainer li:hover {
+  background-color: #f1f1f1;
+}
+
+.problemListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.problemListItem .problemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.problemListItem .problemInfo .problemTitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.problemListItem .problemInfo .problemCategory {
+  font-size: 12px;
+  color: #a0a0a0;
+}
+
+.problemListItem .problemDifficulty {
+  font-weight: 500;
+}
+
+.problemListItem .problemDifficulty.easy {
+  color: #ffd53c;
+}
+
+.problemListItem .problemDifficulty.medium {
+  color: #67d8ea;
+}
+
+.problemListItem .problemDifficulty.hard {
+  color: #9c4cf1;
+}

@@ -1,0 +1,78 @@
+
+.title {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.problemSubTitle {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.problemDesc {
+  padding: 24px 0;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 24px;
+}
+
+.problemDesc span {
+  font-weight: 600;
+}
+
+.problemContainer {
+  display: flex;
+}
+
+.problemInfo {
+  width: 40%;
+}
+
+.problemCode {
+  width: 60%;
+  position: relative;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonContainer:last-child {
+  position: absolute;
+  bottom: 0;
+}
+
+.buttonContainer .button:last-child {
+  margin-left: 12px;
+}
+
+.button {
+  /* width: 48%; */
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.codeMirror {
+  min-height: 200px;
+  outline: 1px solid #dfdfdf;
+}
+
+.problemResult {
+  width: 100%;
+  min-height: 100px;
+  outline: 1px solid #dfdfdf;
+  background-color: #fff;
+}
+
+.problemInput,
+.problemOutput,
+.exampleInput,
+.exampleOutput {
+  /* margin: 12px 0; */
+  margin-bottom: 12px;
+}
+
+.hint {
+  font-size: 13px;
+}
