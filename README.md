@@ -113,12 +113,6 @@ http://localhost:3000
 
 <br>
 
-### 📄 License
-
-MIT License
-
-<br>
-
 ### 🙋‍♂️ 만든 사람
 
 🔗 [github.com/JinwonShen](JinwonShen/algorithm-app)
