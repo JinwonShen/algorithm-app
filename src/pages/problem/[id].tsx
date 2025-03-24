@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import problemsData from '../../data/algorithm_problems.json';
 import styles from "../../styles/[id].module.css"
+import Link from "next/link";
 
 const CodeMirror = dynamic(() => import("@uiw/react-codemirror"), {ssr: false})
 import { javascript } from "@codemirror/lang-javascript";
@@ -58,13 +59,23 @@ export default function ProblemDetail({ problem }: { problem: Problem }) {
   },[])
 
   const runCode = () => {
+    const logs: string[] = [];
+    const originalLog = console.log;
+  
+    console.log = (...args: unknown[]) => {
+      logs.push(args.join(" "));
+      originalLog(...args);
+    };
+  
     try {
-      const result = eval(code); // 입력된 코드 실행
-      setOutput(String(result)) // 실행 결과 저장
+      eval(code); // 코드 실행
+      setOutput(logs.join("\n")); // 콘솔 출력된 내용 출력
     } catch (error) {
-      setOutput("오류 발생: " + error)
+      setOutput("오류 발생: " + error);
     }
-  }
+  
+    console.log = originalLog; // 원래 console.log로 복구
+  };
 
   // 정답 제출 함수
   const submitCode = () => {
@@ -83,7 +94,13 @@ export default function ProblemDetail({ problem }: { problem: Problem }) {
 
   return (
     <div className="wrap">
-      <h1 className={styles.title}>{problem.title}</h1>
+      <div className={styles.headerContainer}>
+        <Link href="/">
+          <h1 className={styles.title}>AlgoNote</h1>
+        </Link>
+      </div>
+
+      <h1 className={styles.problemTitle}>{problem.title}</h1>
 
       <div className={styles.problemDesc}>
         <p><span>카테고리 :</span> {problem.category}</p> 

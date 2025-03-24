@@ -1,0 +1,13 @@
+.codeEditor {
+  display: flex;
+  flex-direction: column;
+}
+
+.result {
+  width: 100%;
+  font-size: 16px;
+}
+
+.runButton {
+  align-self: flex-end;
+}

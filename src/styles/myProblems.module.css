@@ -1,6 +1,15 @@
+/* 버튼 링크 영역 */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeButton {
+  float: right;
+}
 
 .title {
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 }
 
 /* 버튼 링크 영역 */
@@ -9,41 +18,14 @@
   justify-content: space-between;
 }
 
-.myProblemsButton {
-  margin-left: 12px;
+.myProblemsTitle {
+  font-size: 20px;
+  padding-bottom: 12px;
 }
 
-/* 검색창 영역 */
-.searchInput {
-  width: 100%;
-  padding: 12px;
+.homeButton {
+  float: right;
 }
-
-.searchInput:focus {
-  border: 1px solid #000;
-}
-
-/* 필터 영역 */
-.filterContainer {
-  width: 100%;
-  margin: 12px 0;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.filterContainer label {
-  margin-right: 6px;
-}
-
-.filterContainer select {
-  padding: 12px
-}
-
-.filterContainer .filterSort {
-  margin-right: 12px;
-}
-
-/* 문제 리스트 영역 */
 .problemListContainer li:first-child {
   border-top: 1px solid #dfdfdf;
 }

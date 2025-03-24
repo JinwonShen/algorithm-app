@@ -29,13 +29,20 @@ ul {
 input, select, button {
   font-family: inherit;
   /* padding: 0.5rem; */
-  border: 1px solid #ccc;
+  border: 1px solid #dfdfdf;
   border-radius: 4px;
   outline: none;
 }
 
 button {
   cursor: pointer;
+  padding: 12px;
+  margin: 12px 0;
+  background-color: transparent;
+}
+
+button:hover {
+  background-color: #f1f1f1;
 }
 
 /* 전역 클래스 요소 */

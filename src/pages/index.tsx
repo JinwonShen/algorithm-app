@@ -52,7 +52,19 @@ export default function Home() {
 
   return (
     <div className="wrap">
-      <h1 className={styles.title}>AlgoNote</h1>
+      <div className={styles.headerContainer}>
+        <Link href="/">
+          <h1 className={styles.title}>AlgoNote</h1>
+        </Link>
+        <div className={styles.buttonContainer}>
+          <Link href="/editor">
+            <button className={styles.editorButton}>🧑‍💻 코드 에디터</button>
+          </Link>
+          <Link href="/myProblems">
+            <button className={styles.myProblemsButton}>📘 내가 푼 문제 보기</button>
+          </Link>
+        </div>
+      </div>
 
       <input
         type="text"

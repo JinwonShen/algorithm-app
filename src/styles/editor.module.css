@@ -1,0 +1,18 @@
+.title {
+  padding-bottom: 12px;
+}
+
+/* 버튼 링크 영역 */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editorTitle {
+  font-size: 20px;
+  padding-bottom: 12px;
+}
+
+.homeButton {
+  float: right;
+}

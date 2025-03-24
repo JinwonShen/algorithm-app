@@ -1,6 +1,12 @@
 
 .title {
-  padding-bottom: 24px;
+  padding-bottom: 12px;
+}
+
+.problemTitle {
+  font-size: 20px;
+  padding: 6px 0 12px;
+  /* border-top: 1px solid #dfdfdf; */
   border-bottom: 1px solid #dfdfdf;
 }
 
@@ -45,12 +51,6 @@
 
 .buttonContainer .button:last-child {
   margin-left: 12px;
-}
-
-.button {
-  /* width: 48%; */
-  padding: 12px;
-  margin: 12px 0;
 }
 
 .codeMirror {
