@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
   experimental: {
     esmExternals: true, // ESM 지원 활성화
   },
-  output: 'export', // ✅ 정적 사이트로 export
   images: {
     unoptimized: true, // ✅ 이미지 최적화 비활성화 (필수)
   },
