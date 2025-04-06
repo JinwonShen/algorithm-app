@@ -1,9 +1,14 @@
-import type { NextConfig } from "next";
-import type { Configuration } from "webpack";
+import type { NextConfig } from 'next';
+import type { Configuration } from 'webpack';
 
 const nextConfig: NextConfig = {
-  output: "export",
-  assetPrefix: "/algorithm-app/",
+  output: 'export',
+  basePath: '/algorithm-app',
+  assetPrefix: '/algorithm-app/', // ✅ 이것 중요!!
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
   webpack: (config: Configuration) => {
     config.resolve = {
       ...config.resolve,
@@ -17,11 +22,6 @@ const nextConfig: NextConfig = {
   experimental: {
     esmExternals: true,
   },
-  images: {
-    unoptimized: true,
-  },
-  basePath: "/algorithm-app",
-  trailingSlash: true,
 };
 
 export default nextConfig;
