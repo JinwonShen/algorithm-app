@@ -89,18 +89,100 @@ src/
 
 <br>
 
-## 🛠️ 실행 방법
+## 🧪 초기 배포 시도: GitHub Pages 실패 원인
 
-```bash
-# 패키지 설치
-npm install
+### ❌ 시도한 방법
 
-# 개발 서버 실행
-npm run dev
+- `next.config.ts`에 `basePath`와 `assetPrefix` 설정
+- `next export`를 사용해 정적 파일(`out`) 생성
+- `gh-pages` 패키지로 GitHub Pages에 배포
 
-# 브라우저에서 확인
-http://localhost:3000
+### ⚠️ 발생한 문제들
+
+- `_next/static/...` 경로에 접근 불가 (404 오류)
+- CSS 및 JS 리소스 누락으로 레이아웃이 깨짐
+- `.nojekyll` 누락으로 정적 리소스 무시됨
+- GitHub Pages 경로 호환 이슈 및 캐시 문제 등
+
+결국 GitHub Pages는 Next.js 정적 사이트와 완전히 호환되기 어려운 점이 많았음
+
+---
+
+## 🚀 전환: Vercel을 활용한 배포 (최종 성공)
+
+[Vercel](https://vercel.com)은 **Next.js 제작사인 Vercel이 직접 운영하는 플랫폼**으로, Next.js 프로젝트에 최적화된 배포 환경을 제공함
+
+### ✅ 장점
+
+- `basePath`, `assetPrefix` 필요 없음
+- 자동 라우팅 및 정적 빌드 지원
+- 배포가 매우 간단 (CLI 또는 GitHub 연동)
+- 빠른 속도와 글로벌 CDN 지원
+
+### 🔧 배포 절차 (npx 방식)
+
+1. Vercel CLI 설치
+
+   ```bash
+   npm install -g vercel
+   ```
+
+2. 로그인 및 초기화
+
+   ```bash
+   npx vercel
+   ```
+
+   - GitHub 연동 진행
+   - 프로젝트 이름, 루트 디렉토리 설정 (기본값 그대로 OK)
+
+3. 최종 배포
+
+   ```bash
+   npx vercel --prod
+   ```
+
+4. 배포 주소 확인
+   **예: **``
+
+---
+
+## ✅ 현재 배포 주소
+
+👉 [https://algorithm-9r06nuwrx-jinwonshens-projects.vercel.app](https://algorithm-9r06nuwrx-jinwonshens-projects.vercel.app)
+
+---
+
+## 🛠 기술 스택
+
+- Frontend: **React (Next.js)**, **TypeScript**
+- Code Editor: [@uiw/react-codemirror](https://github.com/uiwjs/react-codemirror)
+- 배포: **Vercel**
+
+---
+
+## 📂 폴더 구조
+
 ```
+my-algorithm-app
+├── pages
+│   ├── index.tsx
+│   ├── problem/[id].tsx
+│   ├── editor.tsx
+│   └── myProblems.tsx
+├── components
+├── styles
+├── public
+├── utils
+└── next.config.ts
+```
+
+---
+
+## 🙌 Special Thanks
+
+- GitHub Pages 삽질 덕분에 정적 배포의 구조를 깊게 이해하게 됨
+- 함께한 Vercel, 너는 정말 최고의 친구다 😭🙏
 
 <br>
 

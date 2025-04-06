@@ -3,8 +3,6 @@ import type { Configuration } from 'webpack';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/algorithm-app',
-  assetPrefix: '/algorithm-app/', // ✅ 이것 중요!!
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -13,8 +11,8 @@ const nextConfig: NextConfig = {
     config.resolve = {
       ...config.resolve,
       alias: {
-        ...config.resolve?.alias,
-        "react-codemirror": require.resolve("@uiw/react-codemirror"),
+        ...(config.resolve?.alias || {}),
+        'react-codemirror': require.resolve('@uiw/react-codemirror'),
       },
     };
     return config;
