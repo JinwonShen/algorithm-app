@@ -13,7 +13,7 @@
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.3",
     "@uiw/react-codemirror": "^4.23.10",
-    "next": "15.2.3",
+    "next": "15.2.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
